@@ -10,6 +10,8 @@ redash:
   links:
     - redis
     - postgres
+  external_links:
+    - api_influxdb_1:influxdb
   environment:
     REDASH_STATIC_ASSETS_PATH: "../rd_ui/dist/"
     REDASH_LOG_LEVEL: "INFO"
