@@ -50,3 +50,21 @@ You can try out the demo instance: http://demo.redash.io/ (login with any Google
 ## License
 
 See [LICENSE](https://github.com/getredash/redash/blob/master/LICENSE) file.
+
+## Docker-Compose
+
+```bash
+docker-compose pull
+
+# Create database
+docker-compose up -d postgres
+./setup/docker/create_database.sh
+
+# Build dependencies
+make deps
+
+# Start
+docker-compose up -d
+```
+
+Connect to port `5000` and login with default account `admin:admin`
